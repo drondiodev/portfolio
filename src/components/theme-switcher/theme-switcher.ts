@@ -10,31 +10,31 @@ import {
 } from './icons';
 
 const themes = [
-  {
-    name: 'default',
-    icon: classicThemeIcon,
-    label: 'Light',
-  },
-  {
-    name: 'dark',
-    icon: darkThemeIcon,
-    label: 'Dark',
-  },
-//   {
-//     name: 'earth',
-//     icon: earthThemeIcon,
-//     label: 'Earth',
-//   },
-//   {
-//     name: 'ocean',
-//     icon: blueThemeIcon,
-//     label: 'Ocean',
-//   },
-//   {
-//     name: 'sand',
-//     icon: orangeThemeIcon,
-//     label: 'Sand',
-//   }
+	{
+		name: 'default',
+		icon: classicThemeIcon,
+		label: 'Default',
+	},
+	{
+		name: 'dark',
+		icon: darkThemeIcon,
+		label: 'Dark',
+	},
+	// {
+	// 	name: 'earth',
+	// 	icon: earthThemeIcon,
+	// 	label: 'Earth',
+	// },
+	// {
+	// 	name: 'ocean',
+	// 	icon: blueThemeIcon,
+	// 	label: 'Ocean',
+	// },
+	// {
+	// 	name: 'sand',
+	// 	icon: orangeThemeIcon,
+	// 	label: 'Sand',
+	// }
 ]
 
 @customElement('theme-switcher')
@@ -57,7 +57,7 @@ export class ThemeSwitcher extends LitElement {
 			}
 			button[active] {
 				border: 2px solid var(--theme-primary);
-        box-shadow: 0 0 12px 1px var(--theme-primary);
+				box-shadow: 0 0 12px 1px var(--theme-primary);
 			}
 			button:hover {
 				border: 2px solid var(--theme-primary);
@@ -91,13 +91,13 @@ export class ThemeSwitcher extends LitElement {
 		if (localStorageTheme !== null) {
 			this._setTheme(localStorageTheme);
 		} else {
-      this._setTheme('default');
+		this._setTheme('default');
     }
 	}
 
-  firstUpdated() {
+	firstUpdated() {
     this._getCurrentTheme();
-  }
+	}
 
 	private _setTheme(theme) {
 		this._doc.setAttribute('data-theme', theme);
