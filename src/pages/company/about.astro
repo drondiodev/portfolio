@@ -1,0 +1,58 @@
+---
+import { TextSection, CustomerQuoteSection, CtaCardSection} from '@littlesticks/odyssey-theme-components';
+import Layout from '../../layouts/Page.astro';
+import HeroSection from '../../components/sections/heros/HeroSection.astro';
+
+const seo = {
+	title: 'A propos',
+	description: 'A propos de moi',
+};
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h2 class="who">QUI SUIS-JE ?</h2>
+		<CtaCardSection>
+			<p>Mon super pouvoir :</p>
+			<p>"la résolution de problèmes."</p>
+		</CtaCardSection>
+			<p>Actuellement en formation de développement web spécialisé en accessibilité numérique à l’école O’clock, je me lance dans une nouvelle aventure professionnelle.</p>
+			<p>Grâce à mon parcours, c’est ma maturité, ma faculté d’adaptation et ma persévérance que je peux mettre à votre service.</p>
+			<p>Organisé, je sais prendre en compte les priorités, prendre l'initialive si nécessaire et travailler en autonomie.</p>
+		</div>
+	</HeroSection>
+	<CustomerQuoteSection
+		quoteText="Je monte en compétences pour encadrer toutes les phases d'un projet."
+    />
+	<TextSection narrow>
+    <p>
+       Excellent communicateur et collaborateur, je comprends que vous ne vous souciez pas toujours de *comment* c'est fait, juste que c'est bien fait et à temps ;)
+    </p>
+    
+	</TextSection>
+	<CustomerQuoteSection
+		quoteText="Si vous êtes à la recherche de votre futur développeur (en présentiel, hybride ou full remote ), que vous soyez ouvert à un profil en reconversion, et soyez prêt à investir dans sa formation en interne, rencontrons-nous !"
+    />
+</Layout>
+
+<style>
+
+.who {
+	justify-self: center;
+	max-width: 25rem;
+	text-transform: uppercase;
+	font-size: 35px;
+	padding-top: 30px;
+	font-weight: 600;
+	height: auto;
+	margin-bottom: 40px;
+	line-height: 50px;
+	}
+	.who::before {
+		content: "___";
+		transform: translateY(-18px);
+		display: inline-block;
+		font-weight: 600;
+	}
+</style>

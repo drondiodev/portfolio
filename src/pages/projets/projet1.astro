@@ -1,0 +1,86 @@
+---
+import {Icon} from 'astro-icon'
+import {
+	AnnouncementBar,
+	Button,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	StickyTextImageSection,
+	CtaCardSection
+} from '@littlesticks/odyssey-theme-components';
+import Layout from '../../layouts/Page.astro';
+import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
+
+const seo = {
+	title: 'Projet Portfolio',
+	description: 'Mon portfolio',
+};
+---
+
+<!-- <AnnouncementBar text="Read Our Latest Blog Post" href="/blog/posts/remote-work-mental-health/" slot="announcement-bar"/> -->
+<Layout seo={seo} >
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h3 class="more">Don't Reinvent the Wheel !</h3>
+		</div>
+		<div slot="btns-container">
+			<a href="https://github.com/drondiodev" target="_blank" rel='noreferrer'>Github
+					<Icon name="mdi:github" width="40px" height="40px"/></a>
+<!-- 
+				<Button href="https://github.com/drondiodev" target="_blank" customIcon
+				>Github  <Fragment slot="icon">
+				<Icon name="mdi:github"/>
+				</Fragment>
+				</Button> -->
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/home/screenshots/portfolio.webp"
+				alt="image de mon portfolio"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
+
+	<CustomerQuoteSection
+		quoteText="Création de mon portfolio professionel avec la librairie Astro, qui met à disposition mes projets récents."
+	/>
+
+	<CtaCardSection>
+		<h3 class="more">Les technologies</h3>	
+		<br>
+			<Icon name=simple-icons:astro width="50px" height="50px" />
+			<br>
+			<p>
+			Astro est un framework web tout-en-un pour la création de sites web rapides centrés sur le contenu.
+			</p>
+	</CtaCardSection>
+
+	<CtaCardSection background="var(--theme-surface-1)" color="var(--theme-on-surface-2)">
+		<h3 class="more">Vous avez une idée, un projet ?</h3>
+		<p>Parlons-en !</p>
+		<Button href="/#contact" outlined customIcon>Me contacter <Fragment slot="icon">
+		<Icon name="ic:baseline-launch" />
+		</Fragment></Button>
+	</CtaCardSection>
+
+</Layout>
+
+<style>
+
+.more {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    height: auto;
+    font-size: 25px;
+}
+
+.more::after {
+    content: '___';
+    display: block;
+    font-weight: 900;
+    transform: translateY(-15px);
+}
+</style>
+

@@ -1,0 +1,81 @@
+---
+import { Container, Button, CustomerQuoteSection} from '@littlesticks/odyssey-theme-components';
+import settings from '../../../config/settings.js';
+import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
+---
+
+<Container>
+	<section class="hero-section__section">
+		<div class="hero-section__text">
+			<h1 class="hello">Hello</h1>
+			<p>Ensemble développons un web qui repousse les limites et crée des expériences en ligne époustouflantes.
+			</p>
+        {settings.enableThemeSwitcher && <ThemeSwitcher client:load/>}
+		</div>
+		<div class="hero-section__image"> 
+			<picture>
+				<img
+					src="/assets/images/home/sujet.png"
+					alt="photo David Rondio"
+					id="home-hero-image"
+				/>
+			</picture>
+		</div>
+	</section>
+		<blockquote>Avec mes 18 années d'expertise en commerce et vente, j'ai pris le virage décisif vers le développement web. Mon objectif : créer des sites d'excellence, alliant accessibilité et expérience utilisateur remarquable. Je m'engage à fournir des solutions fonctionnelles et innovantes, adaptées à chaque projet. "
+		</blockquote>
+
+<style>
+	.hero-section__section {
+		margin: var(--section-margin) auto;
+		min-height: clamp(90vh, 100vw, calc(100vh - var(--navbar-height)));
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 1rem;
+	}
+	.hero-section__text {
+		justify-self: center;
+		max-width: 25rem;
+		.hello {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 50px;
+		padding-top: 30px;
+		font-weight: 600;
+		height: auto;
+		margin-bottom: 40px;
+		line-height: 50px;
+		}
+		.hello::before {
+			content: "___";
+			transform: translateY(-24px);
+			display: inline-block;
+			font-weight: 600;
+			}
+	}
+	
+	.hero-btns__container {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	.hero-btns__container {
+		margin-right: 1rem;
+	}
+	.hero-section__image {
+		display: flex;
+	}
+	.hero-section__image img {
+		width: 100%;
+		height: 100%;
+		max-height: 80vh;
+		object-fit: cover;
+		border-radius: var(--theme-shape-radius);
+	}
+	@media (max-width: 768px) {
+		.hero-section__section {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

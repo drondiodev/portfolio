@@ -1,0 +1,118 @@
+---
+import {Icon} from 'astro-icon'
+import {
+	AnnouncementBar,
+	Button,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	StickyTextImageSection,
+	CtaCardSection
+} from '@littlesticks/odyssey-theme-components';
+import Layout from '../../layouts/Page.astro';
+import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
+
+const seo = {
+	title: 'Projet CV',
+	description: 'Mon CV',
+};
+---
+
+<Layout seo={seo} >
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h3>Mon CV</h3>
+		</div>
+		<div slot="btns-container">
+			<Button href="https://github.com/drondiodev/drondiodev.github.io" target="_blank" rel='noreferrer' outlined customIcon>Github
+				<Fragment slot="icon">
+					<Icon name="mdi:github" />
+				</Fragment>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/home/screenshots/cv.webp"
+				alt="image de mon cv"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
+
+	<CustomerQuoteSection
+		quoteText="Création de mon CV en HTML/SCSS"
+	/>
+
+	<CtaCardSection>
+		<h3 class="more">Les technologies</h3>	
+		<br>
+			<Icon name=simple-icons:html5 width="50px" height="50px" />
+			<Icon name=simple-icons:sass width="50px" height="50px" />
+			<br>
+			<p>
+			Mon CV professionnel en HTML & CSS, en utilisant du SCSS et le bundler Parcel.
+			</p>
+	</CtaCardSection>
+
+	<CtaCardSection background="var(--theme-surface-1)" color="var(--theme-on-surface-2)">
+		<h3 class="more">Vous avez une idée, un projet ?</h3>
+		<p>Parlons-en !</p>
+		<Button href="/#contact" outlined customIcon>Me contacter <Fragment slot="icon">
+		<Icon name="ic:baseline-launch" />
+		</Fragment></Button>
+	</CtaCardSection>
+
+</Layout>
+
+<style>
+.full-page-split__wrapper {
+	display: grid;
+	grid-template-columns: 6fr 4fr;
+	grid-auto-columns: 1fr;
+	min-height: 100vh;
+}
+.full-page-split__image-section {
+	position: relative;
+}
+.full-page-split__image-section :global(img) {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+.full-page-split__logo {
+	background-color: var(--theme-surface-1);
+	color: (--theme-on-surface-1);
+	padding: 0.5rem 1rem;
+	border-radius: var(--theme-shape-radius);
+	top: 1rem;
+	left: 1rem;
+	position: absolute;
+	z-index: 1;
+}
+.full-page-split__logo a {
+	text-decoration: none;
+}
+.full-page-split__content-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.full-page-split__content-container {
+	margin: 1rem;
+	padding: 2rem;
+	background-color: var(--theme-surface-1);
+	color: var(--theme-on-surface-1);
+	border-radius: var(--theme-shape-radius);
+}
+.full-page-split__content-container h1 {
+	font-size: var(--font-size-xl);
+}
+@media(max-width: 768px) {
+	.full-page-split__wrapper {
+		grid-template-columns: 1fr;
+		grid-template-rows: 30vh auto;
+}
+.full-page-split__image-section :global(img) {
+    max-height: 30vh;
+	}
+}
+</style>
+

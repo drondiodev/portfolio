@@ -1,0 +1,26 @@
+---
+import { Button, FormInput, FormSelect, FormTextarea } from '@littlesticks/odyssey-theme-components';
+
+const selectOptions = [
+  "Google Search",
+  "Social Media",
+  "Email",
+]
+
+---
+
+<form name="Contact Form" method="POST" action="/contact-thank-you">
+  <FormInput type="text" label="Votre nom" name="Name" placeholder="John Doe" />
+  <FormInput type="email" label="Email" name="Email" placeholder="john.doe@exemple.com" />
+  <!-- <FormSelect label="How Did You Hear About Us?" options={selectOptions} /> -->
+  <FormTextarea label="Message" name="Message" placeholder="Votre message ici" />
+  <Button>Envoyez</Button>
+</form>
+
+<style>
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+</style>

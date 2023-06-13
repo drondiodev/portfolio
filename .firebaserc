@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "portfolio"
+  },
+  "targets": {
+    "little-sticks": {
+      "hosting": {
+        "odyssey-theme": [
+          "odyssey-theme"
+        ],
+        "www": [
+          ""
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

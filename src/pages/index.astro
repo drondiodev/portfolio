@@ -1,0 +1,119 @@
+---
+import { Container, FeatureCard } from '@littlesticks/odyssey-theme-components';
+
+import Layout from '../layouts/Page.astro';
+import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
+---
+
+<Layout>
+	<HomeHeroSection />
+	<Container>
+		<section class="feature-card__section" id="projets">
+				<section class="hero-section__text">
+				<h3 class="projets">mes projets</h3>
+				<p>Consulte mon portfolio et découvre l'ensemble de mes réalisations.</p>
+				</section>
+			<div class="feature-card__grid">
+				<FeatureCard href="/projets/projet1" title="Mon portfolio" imgSrc="/assets/images/home/screenshots/portfolio">
+				</FeatureCard>
+				<FeatureCard href="/projets/projet2" title="CV" imgSrc="/assets/images/home/screenshots/cv">
+				</FeatureCard>
+				<FeatureCard href="#" title="Autre projet" imgSrc="/assets/images/home/screenshots/blog">
+				</FeatureCard>
+			</div>
+		</section>
+	</Container>
+	<Container>
+		<section class="contact-hero__section" id="contact">
+			<div class="contact-hero__text-section">
+				<p class="more">Rencontrons-nous !</p>
+				<div>
+					<p><em><a href="mailto:drondiodev@icloud.com">drondiodev@icloud.com</a></em>
+					</p>
+				</div>
+			</div>
+		</section>
+	</Container>
+</Layout>
+
+<style>
+	.more {
+	text-align: center;
+	font-weight: 600;
+	text-transform: uppercase;
+	height: auto;
+	font-size: 30px;
+	}
+
+	.more::after {
+	content: '___';
+	display: block;
+	font-weight: 900;
+	transform: translateY(-15px);
+	}
+	
+	.hero-section__text {
+		justify-self: center;
+		max-width: 25rem;
+		.projets {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 30px;
+		padding-top: 30px;
+		font-weight: 600;
+		height: auto;
+		margin-bottom: 40px;
+		line-height: 50px;
+		}
+		.projets::before {
+			content: "___";
+			transform: translateY(-15px);
+			display: inline-block;
+			font-weight: 600;
+			}
+	}
+	.feature-card__section {
+		margin: var(--section-margin) auto;
+		
+		.hero-section__text h4 {
+			margin-bottom: 1rem;
+		}
+	}
+	.feature-card__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--theme-grid-gap);
+		font-family: var(--theme-font-family-serif);
+	}
+	
+
+	.contact-hero__section {
+		margin: var(--section-margin) auto;
+		display: grid;
+		min-height: calc(90vh - var(--navbar-height));
+		gap: 3rem;
+	}
+	.contact-hero__text-section {
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+	}
+	.col-2__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	
+	@media (max-width: 768px) {
+		.feature-card__grid {
+			grid-template-columns: 1fr;
+		}
+		.contact-hero__section {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
