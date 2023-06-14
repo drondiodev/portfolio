@@ -2,39 +2,15 @@ import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
 import {
-	// classicThemeIcon,
-	// darkThemeIcon,
-	// earthThemeIcon,
 	blueThemeIcon,
-	// orangeThemeIcon,
 } from './icons';
 
 const themes = [
-	// {
-	// 	name: 'default',
-	// 	icon: classicThemeIcon,
-	// 	label: 'Classic',
-	// },
-	// {
-	// 	name: 'dark',
-	// 	icon: darkThemeIcon,
-	// 	label: 'Dark',
-	// },
-	// {
-	// 	name: 'earth',
-	// 	icon: earthThemeIcon,
-	// 	label: 'Earth',
-	// },
 	{
 		name: 'default',
 		icon: blueThemeIcon,
 		label: 'Ocean',
 	},
-	// {
-	// 	name: 'sand',
-	// 	icon: orangeThemeIcon,
-	// 	label: 'Sand',
-	// }
 ]
 
 @customElement('theme-switcher')
@@ -107,18 +83,6 @@ export class ThemeSwitcher extends LitElement {
 		if (theme === 'default') {
 			_heroImage.src = '/assets/images/home/sujet.png';
 		}
-		// if (theme === 'dark') {
-		// 	_heroImage.src = '/assets/images/home/sujet.png';
-		// }
-		// if (theme === 'earth') {
-		// 	_heroImage.src = '/assets/images/home/earth-hero.jpg';
-		// }
-		// if (theme === 'ocean') {
-		// 	_heroImage.src = '/assets/images/home/ocean-hero.jpg';
-		// }
-		// if (theme === 'sand') {
-		// 	_heroImage.src = '/assets/images/home/sand-hero.jpg';
-		// }
 		localStorage.setItem('theme', theme);
 		this.theme = theme;
 	}
