@@ -37,7 +37,7 @@
 }
 
 [data-theme='default'] {
-	color-scheme: light;
+	color-scheme: ocean;
 	/* Theme Colors */
 	--theme-primary: hsl(0, 0%, 0%);
 	--theme-primary-hover: hsl(0, 0%, 20%);
@@ -70,10 +70,10 @@
 	--theme-blog-post-header-width: 1200px;
 }
 
-[data-theme='dark'] {
-	color-scheme: dark;
-	/* Theme Colors */
-	--theme-primary: hsl(0, 0%, 100%);
+/* [data-theme='dark'] {
+	color-scheme: dark; */
+/* Theme Colors */
+/* --theme-primary: hsl(0, 0%, 100%);
 	--theme-primary-hover: hsl(0, 0%, 90%);
 	--theme-on-primary: hsl(0, 0%, 0%);
 
@@ -89,11 +89,11 @@
 	--theme-shape-radius: 0;
 
 	--form-field-input-color: var(--theme-on-bg);
-}
+} */
 
-[data-theme='earth'] {
-	/* Theme Colors */
-	--theme-primary: #2c3e2d;
+/* [data-theme='earth'] { */
+/* Theme Colors */
+/* --theme-primary: #2c3e2d;
 	--theme-primary-hover: #395a3b;
 	--theme-on-primary: hsl(0, 0%, 100%);
 
@@ -107,7 +107,7 @@
 	--theme-on-surface-2: #000;
 
 	--theme-button-border-radius: 0.5rem;
-}
+} */
 
 [data-theme='ocean'] {
 	/* Theme Colors */
@@ -126,10 +126,10 @@
 	--theme-on-surface-2: #ffffff;
 }
 
-[data-theme='sand'] {
-	/* Theme Colors */
-	/* Theme Colors */
-	--theme-primary: #e38a20;
+/* [data-theme='sand'] { */
+/* Theme Colors */
+/* Theme Colors */
+/* --theme-primary: #e38a20;
 	--theme-primary-hover: #eb870f;
 	--theme-on-primary: hsl(0, 0%, 100%);
 
@@ -143,4 +143,4 @@
 	--theme-on-surface-2: #ffffff;
 
 	--theme-button-border-radius: 0.5rem;
-}
+} */
