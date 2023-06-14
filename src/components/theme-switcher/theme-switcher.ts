@@ -2,31 +2,31 @@ import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
 import {
-	classicThemeIcon,
-	darkThemeIcon,
+	// classicThemeIcon,
+	// darkThemeIcon,
 	// earthThemeIcon,
-	// blueThemeIcon,
+	blueThemeIcon,
 	// orangeThemeIcon,
 } from './icons';
 
 const themes = [
-	{
-		name: 'default',
-		icon: classicThemeIcon,
-		label: 'Default',
-	},
-	{
-		name: 'dark',
-		icon: darkThemeIcon,
-		label: 'Dark',
-	},
+	// {
+	// 	name: 'default',
+	// 	icon: classicThemeIcon,
+	// 	label: 'Classic',
+	// },
+	// {
+	// 	name: 'dark',
+	// 	icon: darkThemeIcon,
+	// 	label: 'Dark',
+	// },
 	// {
 	// 	name: 'earth',
 	// 	icon: earthThemeIcon,
 	// 	label: 'Earth',
 	// },
 	// {
-	// 	name: 'ocean',
+	// 	name: ' default',
 	// 	icon: blueThemeIcon,
 	// 	label: 'Ocean',
 	// },
@@ -72,6 +72,7 @@ export class ThemeSwitcher extends LitElement {
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+}
 			}
 			.theme-select__container p {
 				font-size: var(--font-size-sm);
@@ -106,9 +107,9 @@ export class ThemeSwitcher extends LitElement {
 		if (theme === 'default') {
 			_heroImage.src = '/assets/images/home/sujet.png';
 		}
-		if (theme === 'dark') {
-			_heroImage.src = '/assets/images/home/sujet.png';
-		}
+		// if (theme === 'dark') {
+		// 	_heroImage.src = '/assets/images/home/sujet.png';
+		// }
 		// if (theme === 'earth') {
 		// 	_heroImage.src = '/assets/images/home/earth-hero.jpg';
 		// }

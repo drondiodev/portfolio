@@ -6,7 +6,7 @@ import lit from "@astrojs/lit";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://drondiodev-portfolio.netlify.app/',
+  site: 'https://odyssey-theme.littlesticks.dev/',
   // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
   sitemap: false,
   // Generate sitemap (set to "false" to disable)

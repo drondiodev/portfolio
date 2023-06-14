@@ -1,7 +1,8 @@
 ---
-import { Container, Button, CustomerQuoteSection} from '@littlesticks/odyssey-theme-components';
+import { Icon } from 'astro-icon';
+import { Container, Button, CustomerQuoteSection } from '@littlesticks/odyssey-theme-components';
 import settings from '../../../config/settings.js';
-import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
+// import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 ---
 
 <Container>
@@ -10,7 +11,7 @@ import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 			<h1 class="hello">Hello</h1>
 			<p>Ensemble développons un web qui repousse les limites et crée des expériences en ligne époustouflantes.
 			</p>
-        {settings.enableThemeSwitcher && <ThemeSwitcher client:load/>}
+        <!-- {settings.enableThemeSwitcher && <ThemeSwitcher client:load/>} -->
 		</div>
 		<div class="hero-section__image"> 
 			<picture>

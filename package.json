@@ -2,10 +2,7 @@
 	"name": "portfolio",
 	"version": "1.0",
 	"private": false,
-	"repository": {
-		"type": "git",
-		"url": ""
-	},
+
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",

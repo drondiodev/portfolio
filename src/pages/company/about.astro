@@ -3,6 +3,8 @@ import { TextSection, CustomerQuoteSection, CtaCardSection } from '@littlesticks
 import Layout from '../../layouts/Page.astro';
 import HeroSection from '../../components/sections/heros/HeroSection.astro';
 
+
+
 const seo = {
 	title: 'A propos',
 	description: 'A propos de moi',
@@ -25,10 +27,17 @@ const seo = {
 	<CustomerQuoteSection
 		quoteText="Je monte en compétences pour encadrer toutes les phases d'un projet."
     />
+
 	<TextSection narrow>
     <p>
        Excellent communicateur et collaborateur, je comprends que vous ne vous souciez pas toujours de *comment* c'est fait, juste que c'est bien fait et à temps ;)
     </p>
+	<br>
+	<div class="hero-section__text">
+			<h1 class="hello-skills">Mes compétences</h1>
+	</div>
+
+	
     
 	</TextSection>
 	<CustomerQuoteSection
@@ -37,6 +46,34 @@ const seo = {
 </Layout>
 
 <style>
+	.hero-section__section {
+		margin: var(--section-margin) auto;
+		min-height: clamp(90vh, 100vw, calc(100vh - var(--navbar-height)));
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 1rem;
+	}
+	.hero-section__text {
+		justify-self: center;
+		max-width: 25rem;
+		.hello-skills {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 30px;
+		padding-top: 30px;
+		font-weight: 600;
+		height: auto;
+		margin-bottom: 40px;
+		line-height: 50px;
+		}
+		.hello-skills::before {
+			content: "___";
+			transform: translateY(-15px);
+			display: inline-block;
+			font-weight: 600;
+			}
+	}
 
 .who {
 	justify-self: center;
