@@ -7,7 +7,7 @@ import {
 
 const themes = [
 	{
-		name: 'default',
+		name: 'ocean',
 		icon: blueThemeIcon,
 		label: 'Ocean',
 	},
@@ -68,7 +68,7 @@ export class ThemeSwitcher extends LitElement {
 		if (localStorageTheme !== null) {
 			this._setTheme(localStorageTheme);
 		} else {
-		this._setTheme('default');
+		this._setTheme('ocean');
     }
 	}
 
@@ -80,7 +80,7 @@ export class ThemeSwitcher extends LitElement {
 		this._doc.setAttribute('data-theme', theme);
 
     const _heroImage = document.querySelector('#home-hero-image') as HTMLImageElement;
-		if (theme === 'default') {
+		if (theme === 'ocean') {
 			_heroImage.src = '/assets/images/home/sujet.png';
 		}
 		localStorage.setItem('theme', theme);
