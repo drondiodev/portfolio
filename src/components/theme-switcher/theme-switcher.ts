@@ -25,11 +25,11 @@ const themes = [
 	// 	icon: earthThemeIcon,
 	// 	label: 'Earth',
 	// },
-	// {
-	// 	name: ' default',
-	// 	icon: blueThemeIcon,
-	// 	label: 'Ocean',
-	// },
+	{
+		name: ' default',
+		icon: blueThemeIcon,
+		label: 'Ocean',
+	},
 	// {
 	// 	name: 'sand',
 	// 	icon: orangeThemeIcon,
