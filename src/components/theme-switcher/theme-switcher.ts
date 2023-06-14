@@ -26,7 +26,7 @@ const themes = [
 	// 	label: 'Earth',
 	// },
 	{
-		name: ' default',
+		name: 'default',
 		icon: blueThemeIcon,
 		label: 'Ocean',
 	},
