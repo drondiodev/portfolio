@@ -14,7 +14,7 @@ export interface Props {
 const title = Astro.props.title || settings.title;
 const description = Astro.props.description || settings.description;
 const canonicalURL = Astro.props.canonicalURL || new URL(Astro.url.pathname, Astro.site);
-const image = new URL(Astro.props.image || './screenshots/portfolio', Astro.site);
+const image = new URL(Astro.props.image || './portfolio.png', Astro.site);
 ---
 
 <!-- Global Metadata -->
@@ -33,7 +33,7 @@ const image = new URL(Astro.props.image || './screenshots/portfolio', Astro.site
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<!-- <meta property="og:image" content={image} /> -->
+<meta property="og:image" content={image} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
